@@ -18,6 +18,20 @@
 -------------------------------
 - [ ] Понимание автотестирования и практики TDD в объеме тренинга [Unit Testing and TDD](https://github.com/eugene-krivosheyev/unit-testing-and-tdd)
 
+Пререквизиты
+============
+### Hardware
+- [ ] RAM ≥ 8Гб
+
+### Software
+- [ ] [git client](https://git-scm.com/download/win)
+- [ ] [JDK8](https://adoptopenjdk.net/)
+- [ ] [IDEA Ultimate](https://www.jetbrains.com/idea/download) (можно trial)
+
+### Доступы
+- [ ] https://github.com:443 (с возможностью логина, pull и push)
+- [ ] https://mvnrepository.com:443
+- [ ] https://repo.maven.apache.org:443
 
 Программа
 =========
