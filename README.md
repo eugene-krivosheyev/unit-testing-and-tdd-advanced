@@ -45,12 +45,13 @@
 - [ ] О тренере
 - [ ] Разбивка по парам и знакомство-представление друг друга
 - [ ] Приоритезация целей тренинга и сбор проблем
-- [ ] Склонирована кодовая база
+- [ ] Сделаны форки [проекта с тренингом](https://github.com/eugene-krivosheyev/unit-testing-and-tdd-advanced) и [проекта с приложением](https://github.com/eugene-krivosheyev/agile-practices-application) в личные проекты 
+- [ ] Cклонированы форкнутые личные проекты
 ```
-git clone --depth 1 -b master https://github.com/eugene-krivosheyev/agile-practices-application
-git clone --depth 1 -b <YYYY-MM-project> https://github.com/eugene-krivosheyev/unit-testing-and-tdd-advanced
+git clone --depth 1 -b master https://github.com/ACCOUNT/agile-practices-application
+git clone --depth 1 -b master https://github.com/ACCOUNT/unit-testing-and-tdd-advanced
 ```
-- [ ] Soundcheck
+- [ ] Sound check
 ```
 cd agile-practices-application
 mvn clean verify -DexcludedGroups='selenium'
@@ -94,12 +95,11 @@ gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -D
 -----------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
-- [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
 - [ ] And recap for [build tool](https://docs.gradle.org/6.7/userguide/userguide.html)
+- [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
+- [ ] And recap for Spring test support
 - [ ] And recap for test fixture reuse with Builders
 - [ ] And recap for [test-doublers](https://site.mockito.org): dummy, stub, fake
-- [ ] And recap for Spring test support
-- [ ] And recap for Spring test context management and reuse
 - [ ] And recap for [containerized test environment](https://www.testcontainers.org/quickstart/junit_5_quickstart/) 
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
@@ -111,6 +111,7 @@ gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -D
 ----------------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
+- [ ] And recap for Spring test context management and reuse
 - [ ] And recap for test-doublers: mock, spy
 - [ ] And recap for [test suites](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering)
 - [ ] And recap for [build tool test suites support](https://javabydeveloper.com/run-tag-specific-junit-5-tests-from-gradle-command/)
