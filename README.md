@@ -27,6 +27,10 @@
 - [ ] [git client](https://git-scm.com/download/win)
 - [ ] [JDK8](https://adoptopenjdk.net/)
 - [ ] [IDEA Ultimate](https://www.jetbrains.com/idea/download) (можно trial)
+- [ ] [Gradle](https://gradle.org/install/)
+- [ ] [Docker](https://docs.docker.com/desktop/)
+- [ ] [JMeter](https://jmeter.apache.org/download_jmeter.cgi)  
+- [x] [Chrome](https://www.google.com/intl/ru/chrome/)
 
 ### Доступы
 - [ ] https://github.com:443 (с возможностью логина, pull и push)
@@ -46,14 +50,20 @@
 git clone --depth 1 -b master https://github.com/eugene-krivosheyev/agile-practices-application
 git clone --depth 1 -b <YYYY-MM-project> https://github.com/eugene-krivosheyev/unit-testing-and-tdd-advanced
 ```
+- [ ] Soundcheck
+```
+cd agile-practices-application
+mvn clean verify -DexcludedGroups='selenium'
+gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='selenium'
+```
 
 Выравнивание понимания (A)TDD (1/1)
 -----------------------------
 - [ ] Given pairs
 - [ ] When pairs align answers:
-1. What is TDD?
-1. What is rhythm/mantra for TDD cycle?
-1. What are Test-Driven Development Patterns?
+1. What is [TDD](https://github.com/eugene-krivosheyev/unit-testing-and-tdd#какую-ценность-дает-практика-tdd-050)?
+1. What is [rhythm/mantra for TDD cycle](https://github.com/eugene-krivosheyev/unit-testing-and-tdd#в-каком-ритме-писать-по-tdd-1505)?
+1. What are [Test-Driven Development Patterns](https://github.com/eugene-krivosheyev/unit-testing-and-tdd#базовые-шаблоны-tdd-151)?
 1. What are Red Bar Patterns?
 1. What are Testing Patterns?
 1. What are Green Bar Patterns?
@@ -80,27 +90,30 @@ git clone --depth 1 -b <YYYY-MM-project> https://github.com/eugene-krivosheyev/u
 - [ ] Then group aligns answers
 - [ ] And training backlog updated with (A)TDD problems faced
 
-(A)TDD through Spring-based DB-driven app (2/1.5)
+(A)TDD through Spring Boot based DB-driven app (2/1.5)
 -----------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
+- [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
+- [ ] And recap for [build tool](https://docs.gradle.org/6.7/userguide/userguide.html)
 - [ ] And recap for test fixture reuse with Builders
-- [ ] And recap for test-doublers: dummy, stub, fake
+- [ ] And recap for [test-doublers](https://site.mockito.org): dummy, stub, fake
 - [ ] And recap for Spring test support
-- [ ] And recap for Spring test context management
+- [ ] And recap for Spring test context management and reuse
+- [ ] And recap for [containerized test environment](https://www.testcontainers.org/quickstart/junit_5_quickstart/) 
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
 - [ ] Then public code and design review stands for internal Quality Attributes
 - [ ] And branch coverage and mutation coverage increased
 - [ ] And architecture issues faced at development solved
 
-(A)TDD through Spring-based message-driven app (2/1.5)
+(A)TDD through Spring Boot based message-driven app (2/1.5)
 ----------------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
 - [ ] And recap for test-doublers: mock, spy
-- [ ] And recap for test suites
-- [ ] And recap for Spring test context reuse
+- [ ] And recap for [test suites](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering)
+- [ ] And recap for [build tool test suites support](https://javabydeveloper.com/run-tag-specific-junit-5-tests-from-gradle-command/)
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
 - [ ] Then public code and design review stands for internal Quality Attributes
@@ -109,10 +122,11 @@ git clone --depth 1 -b <YYYY-MM-project> https://github.com/eugene-krivosheyev/u
 - [ ] And test suites used for faster feedback 
 - [ ] And architecture issues faced at development solved
 
-(A)TDD through Spring-based integration-driven app (2/1.5)
+(A)TDD through Spring Boot based integration-driven app (2/1.5)
 --------------------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
+- [ ] And recap for [external service calls](https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java) and [swagger code generation](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen)
 - [ ] And recap for external REST service test-doublers
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
@@ -128,7 +142,7 @@ git clone --depth 1 -b <YYYY-MM-project> https://github.com/eugene-krivosheyev/u
 - [ ] Given pairs
 - [ ] And legacy codebase
 - [ ] And recap for benchmark scopes
-- [ ] Add recap for parallel test run options: standalone tool, build tool, test framework, test code
+- [ ] Add recap for parallel test run options: [standalone tool](https://jmeter.apache.org/usermanual/get-started.html), [build](https://discuss.gradle.org/t/relationship-between-forkevery-maxparallelfork-and-parallel/25126/2) [tool](https://stackoverflow.com/a/55558242), [test framework](https://junit.org/junit5/docs/snapshot/user-guide/#writing-tests-parallel-execution), test code
 - [ ] Add recap for concurrency issues to detect
 - [ ] Add recap for app monitoring and loging
 - [ ] And new app requirements
