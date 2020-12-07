@@ -9,7 +9,15 @@ package com.acme;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Optional;
+
+import static java.util.Arrays.asList;
 import static junit.framework.TestCase.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class ClientCrudTest {
      /**
@@ -18,18 +26,32 @@ public class ClientCrudTest {
      @Test
      public void shouldGetClientsAbsenceMessageWhenNoRegisteredClients() {
           //region Given
-          ClientController sut = new ClientController();
+          ClientRepository clientsStub = mock(ClientRepository.class);
+          when(clientsStub.getClients()).thenReturn(Collections.emptyList());
+          ClientController sut = new ClientController(clientsStub);
           //endregion
 
           //region When
-          String message = sut.getClients();
+          final Optional<Collection<Client>> maybeClients = sut.getClients();
           //endregion
 
           //region Then
 
-          assertEquals("No registered clients", message);
+          assertEquals(Optional.empty(), maybeClients);
           //endregion
 
+     }
+
+     @Test
+     public void shouldGetAllClientsWhenThereAerRegisteredClients() {
+
+          final Collection<Client> expectedClients = asList(new Client(1), new Client(2));
+          ClientRepository clientsStub = mock(ClientRepository.class);
+          when(clientsStub.getClients()).thenReturn(expectedClients);
+
+          ClientController sut = new ClientController(clientsStub);
+
+          assertEquals(expectedClients, sut.getClients().get());
      }
 
 }
