@@ -92,9 +92,65 @@ gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -D
 - [ ] And training backlog updated with (A)TDD problems faced
 
 (A)TDD through Spring Boot based DB-driven app (2/1.5)
------------------------------------------
+------------------------------------------------------
 - [ ] Given pairs
-- [ ] And legacy codebase
+- [ ] And legacy codebase and potential test scopes
+
+![structure](https://www.planttext.com/api/plantuml/svg/XLFBRi8m4BpxArRb35-0SW0ELLKaMgfU40V7MOBLnBOSGuKg_hss4oUE8u4KHSdixEnZx9EcDS99Is5G52Hym3m38sj63I45DJId3S9c1RFVCpSuGDkF035PAobG67Z7ahBR9pPcZ_hA6GQALNV5Sif-N8a_0j0YRIKF00n2XxtIN9JRx_KnI3X2czFuM9SpodALlx1M5JKuIXontXJTQNdb1Ue7f29dpwMwCVVcaXzXkMIom1855ba6iugNPrDgUklIskPVg58LjpDpAU24r5mqllIp9DCesN0ZzUsfDi1XRUtJighSKDR2qDgnPmHBN32IxkC31dFBYRRKKoAivKHBwadJWfOPBIgDEynpOlTIjJiP_P81YnRsQeooQn38t7PtKbOZvs9zNt3AzxmfxDcJmvsMt-GFYiUhyd8fsxDIq9crMP5-PF_gplzYaS5WUXg9UupWmUGqClRRxTO-tVLq1eOBQT7-smMY5kxa7m00)
+<details>
+<summary>puml</summary>
+
+```puml
+@startuml
+
+frame frontend
+frontend -> tomcat
+
+database DB #white
+database MQ #white
+component LegacyRestService #white
+
+frame backend {
+  frame tomcat {
+    component [SpringMVC] #white
+    frame spring {
+      component [RestTemplate] #white
+      component [JpaProvider] #white
+      component [JdbcTemplate] #white
+      component [ServiceStub] <<codegened>> #lightgray
+      frame "application feature" {
+        component [Repository] <<codegened>> #lightgray
+        [Controller] -> [Service]
+        Service -> [Repository]
+        Repository --> JpaProvider
+        JpaProvider --> JdbcTemplate
+        
+        Service --> ServiceStub
+        ServiceStub --> RestTemplate
+      }
+    }
+    component [HttpConnectionPool] #white
+    RestTemplate --> HttpConnectionPool
+    HttpConnectionPool --> LegacyRestService
+    
+    component [DbConnectionPool] #white
+    JdbcTemplate --> DbConnectionPool
+    DbConnectionPool -> DB
+    
+    spring ..> Controller
+    spring ..> Service
+    spring ..> Repository
+    spring ..> JpaProvider
+  }
+  
+  tomcat -> SpringMVC
+  SpringMVC -> Controller
+}
+
+@enduml
+```
+</details>
+
 - [ ] And recap for [build tool](https://docs.gradle.org/6.7/userguide/userguide.html)
 - [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
 - [ ] And recap for Spring test support
