@@ -49,7 +49,7 @@
 - [ ] Cклонированы форкнутые личные проекты
 ```
 git clone --depth 1 -b master https://github.com/ACCOUNT/agile-practices-application
-git clone --depth 1 -b master https://github.com/ACCOUNT/unit-testing-and-tdd-advanced
+git clone --depth 1 -b main https://github.com/ACCOUNT/unit-testing-and-tdd-advanced
 ```
 - [ ] Sound check
 ```
