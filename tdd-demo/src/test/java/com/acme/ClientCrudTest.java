@@ -50,7 +50,7 @@ public class ClientCrudTest {
         ClientController sut = new ClientController(clientsStub);
 
         assertEquals(
-                asList(new Client(2), new Client(1)),
+                asList(new Client(1), new Client(2)),
                 sut.getClients().get()
         );
     }
