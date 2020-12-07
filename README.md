@@ -94,7 +94,10 @@ gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -D
 (A)TDD through Spring Boot based DB-driven app (2/1.5)
 ------------------------------------------------------
 - [ ] Given pairs
-- [ ] And legacy codebase and potential test scopes
+- [ ] And recap for test fixture reuse with Builders
+- [ ] And recap for [build tool](https://docs.gradle.org/6.7/userguide/userguide.html)
+- [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
+- [ ] And overview of [legacy codebase](https://github.com/eugene-krivosheyev/agile-practices-application) and its potential test scopes
 
 ![structure](https://www.planttext.com/api/plantuml/svg/XLFBRi8m4BpxArRb35-0SW0ELLKaMgfU40V7MOBLnBOSGuKg_hss4oUE8u4KHSdixEnZx9EcDS99Is5G52Hym3m38sj63I45DJId3S9c1RFVCpSuGDkF035PAobG67Z7ahBR9pPcZ_hA6GQALNV5Sif-N8a_0j0YRIKF00n2XxtIN9JRx_KnI3X2czFuM9SpodALlx1M5JKuIXontXJTQNdb1Ue7f29dpwMwCVVcaXzXkMIom1855ba6iugNPrDgUklIskPVg58LjpDpAU24r5mqllIp9DCesN0ZzUsfDi1XRUtJighSKDR2qDgnPmHBN32IxkC31dFBYRRKKoAivKHBwadJWfOPBIgDEynpOlTIjJiP_P81YnRsQeooQn38t7PtKbOZvs9zNt3AzxmfxDcJmvsMt-GFYiUhyd8fsxDIq9crMP5-PF_gplzYaS5WUXg9UupWmUGqClRRxTO-tVLq1eOBQT7-smMY5kxa7m00)
 <details>
@@ -151,24 +154,28 @@ frame backend {
 ```
 </details>
 
-- [ ] And recap for [build tool](https://docs.gradle.org/6.7/userguide/userguide.html)
-- [ ] And recap for [testing framework](https://junit.org/junit5/docs/current/user-guide/)
-- [ ] And recap for Spring test support
-- [ ] And recap for test fixture reuse with Builders
 - [ ] And recap for [test-doublers](https://site.mockito.org): dummy, stub, fake
+- [ ] And recap for [Spring Core](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#spring-core)
+- [ ] And recap for Spring Configuration and Context
+- [ ] And recap for [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#spring-web)
+- [ ] And recap for [Spring REST API](https://spring.io/guides/gs/rest-service/)  
+- [ ] And recap for [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [ ] And recap for [Spring profiles](https://github.com/eugene-krivosheyev/agile-practices-application/blob/master/src/main/resources/application.yml)
+- [ ] And recap for [Spring test support](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing) and [Boot Test support](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing)
 - [ ] And recap for [containerized test environment](https://www.testcontainers.org/quickstart/junit_5_quickstart/) 
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
 - [ ] Then public code and design review stands for internal Quality Attributes
-- [ ] And branch coverage and mutation coverage increased
+- [ ] And [branch coverage](https://www.jacoco.org/jacoco/index.html) and [mutation coverage](https://pitest.org) increased
 - [ ] And architecture issues faced at development solved
 
 (A)TDD through Spring Boot based message-driven app (2/1.5)
 ----------------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
-- [ ] And recap for Spring test context management and reuse
-- [ ] And recap for test-doublers: mock, spy
+- [ ] And recap for test-doublers: mock, spy  
+- [ ] And recap for [Spring test context reuse and slicing](https://www.baeldung.com/spring-tests)
+- [ ] And recap for [Test-managed transactions](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-tx-test-managed-transactions)
 - [ ] And recap for [test suites](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering)
 - [ ] And recap for [build tool test suites support](https://javabydeveloper.com/run-tag-specific-junit-5-tests-from-gradle-command/)
 - [ ] And new app requirements
@@ -184,7 +191,7 @@ frame backend {
 - [ ] Given pairs
 - [ ] And legacy codebase
 - [ ] And recap for [external service calls](https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java) and [swagger code generation](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen)
-- [ ] And recap for external REST service test-doublers
+- [ ] And recap for external REST service test-doublers: [Spring MockRestServiceServer](https://www.baeldung.com/restclienttest-in-spring-boot), [Wiremock](http://wiremock.org), [MockServer](https://www.mock-server.com)
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
 - [ ] Then public code and design review stands for internal Quality Attributes
@@ -198,10 +205,10 @@ frame backend {
 ------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
-- [ ] And recap for benchmark scopes
 - [ ] Add recap for parallel test run options: [standalone tool](https://jmeter.apache.org/usermanual/get-started.html), [build](https://discuss.gradle.org/t/relationship-between-forkevery-maxparallelfork-and-parallel/25126/2) [tool](https://stackoverflow.com/a/55558242), [test framework](https://junit.org/junit5/docs/snapshot/user-guide/#writing-tests-parallel-execution), test code
+- [ ] Add recap for [Spring limitations for parallel testing](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-parallel-test-execution)  
 - [ ] Add recap for concurrency issues to detect
-- [ ] Add recap for app monitoring and loging
+- [ ] Add recap for app monitoring and logging
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
 - [ ] Then public code and design review stands for internal Quality Attributes
@@ -214,7 +221,8 @@ TDD through mirco benchmark (3/1.5)
 --------------------------- 
 - [ ] Given pairs
 - [ ] And legacy codebase
-- [ ] And recap for JMH
+- [ ] And recap for [JMH](https://github.com/openjdk/jmh)
+- [ ] And review [JMH intro](https://javadevcentral.com/jmh-benchmark-with-examples), [case](https://www.logicmonitor.com/blog/how-we-used-jmh-to-benchmark-our-microservices-pipeline) and [JMH examples](https://github.com/openjdk/jmh/tree/master/jmh-samples/src/main/java/org/openjdk/jmh/samples)  
 - [ ] And new app requirements
 - [ ] When pairs verify correctness of new features' implementation through orthodox ATDD and TDD
 - [ ] And concurrency issues faced at development solved
