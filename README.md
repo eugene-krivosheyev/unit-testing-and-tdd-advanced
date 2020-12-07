@@ -54,8 +54,8 @@ git clone --depth 1 -b master https://github.com/ACCOUNT/unit-testing-and-tdd-ad
 - [ ] Sound check
 ```
 cd agile-practices-application
-mvn clean verify -DexcludedGroups='selenium'
-gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups='selenium'
+mvn clean verify -DexcludedGroups="selenium"
+gradle clean check bootJar jacocoTestReport pitest -i --scan --no-build-cache -DexcludedGroups="selenium"
 ```
 
 Выравнивание понимания (A)TDD (1/1)
