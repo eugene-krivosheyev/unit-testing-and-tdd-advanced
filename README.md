@@ -161,7 +161,7 @@ frame backend {
 - [ ] And recap for [Spring REST API](https://spring.io/guides/gs/rest-service/)  
 - [ ] And recap for [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 - [ ] And recap for [Spring profiles](https://github.com/eugene-krivosheyev/agile-practices-application/blob/master/src/main/resources/application.yml)
-- [ ] And recap for [Spring test support](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing) and [Boot Test support](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing)
+- [ ] And recap for [Spring test support](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testing), [Spring integration test support](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#integration-testing) and [Boot Test support](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing)
 - [ ] And recap for [containerized test environment](https://www.testcontainers.org/quickstart/junit_5_quickstart/) 
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
@@ -174,9 +174,10 @@ frame backend {
 - [ ] Given pairs
 - [ ] And legacy codebase
 - [ ] And recap for test-doublers: mock, spy  
-- [ ] And recap for [Spring test context reuse and slicing](https://www.baeldung.com/spring-tests)
+- [ ] And recap for [test timing insights](https://www.adesso.de/de/news/blog/identify-bottlenecks-in-your-spring-tests-with-junit-insights.jsp)
+- [ ] [Spring tests optimization](https://mgurov.github.io/posts/0001-integration_tests_v_spring/), [optimization overview](https://www.baeldung.com/spring-tests), [slicing](https://tanzu.vmware.com/application-modernization-recipes/testing/spring-boot-testing-best-practices), [context caching and hierarchies](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-ctx-management-caching)
 - [ ] And recap for [Test-managed transactions](https://docs.spring.io/spring-framework/docs/current/reference/html/testing.html#testcontext-tx-test-managed-transactions)
-- [ ] And recap for [test suites](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering)
+- [ ] And recap for [test suites](https://junit.org/junit5/docs/current/user-guide/#writing-tests-tagging-and-filtering) and its goal: faster feedback
 - [ ] And recap for [build tool test suites support](https://javabydeveloper.com/run-tag-specific-junit-5-tests-from-gradle-command/)
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
@@ -190,7 +191,8 @@ frame backend {
 --------------------------------------------------
 - [ ] Given pairs
 - [ ] And legacy codebase
-- [ ] And recap for [external service calls](https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java) and [swagger code generation](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen)
+- [ ] And recap for external service integration overview: RestTemplate sync, WebClient async, [Swagger/OpenAPI stubs](https://www.baeldung.com/spring-boot-rest-client-swagger-codegen) codegened from @Controller _classes_ 
+- [ ] And recap for [HTTP request underlying libraries](https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java)
 - [ ] And recap for external REST service test-doublers: [Spring MockRestServiceServer](https://www.baeldung.com/restclienttest-in-spring-boot), [Wiremock](http://wiremock.org), [MockServer](https://www.mock-server.com)
 - [ ] And new app requirements
 - [ ] When pairs implement new features through orthodox ATDD and TDD
