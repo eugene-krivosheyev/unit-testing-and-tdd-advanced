@@ -26,7 +26,7 @@
 ### Software
 - [ ] [git client](https://git-scm.com/download/win)
 - [ ] [JDK8](https://adoptopenjdk.net/)
-- [ ] [IDEA Ultimate](https://www.jetbrains.com/idea/download) (можно trial)
+- [ ] [IDEA Ultimate](https://www.jetbrains.com/idea/download) (можно trial) + Lombok Plugin
 - [ ] [Gradle](https://gradle.org/install/)
 - [ ] [Docker](https://docs.docker.com/desktop/)
 - [ ] [JMeter](https://jmeter.apache.org/download_jmeter.cgi)  
